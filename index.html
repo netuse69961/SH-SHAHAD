@@ -30,7 +30,7 @@
     }
 
     /* تنسيق الزر لجعله ملفتًا وجميلًا */
-    .play-button {
+    .play-button, .pause-button {
       background-color: #4CAF50; /* لون الزر */
       color: white; /* اللون النص */
       padding: 15px 32px; /* حجم الزر */
@@ -43,10 +43,10 @@
     }
 
     /* تأثير عند مرور المؤشر على الزر */
-    .play-button:hover {
+    .play-button:hover, .pause-button:hover {
       background-color: #45a049;
     }
-    
+
     /* جعل الزر في أعلى الصفحة */
     .button-container {
       position: fixed;
@@ -65,7 +65,10 @@
 
   <!-- وضع الزر في أعلى الصفحة -->
   <div class="button-container">
-    <button class="play-button" onclick="document.getElementById('myAudio').play()">تشغيل الصوت</button>
+    <!-- زر تشغيل الصوت -->
+    <button class="play-button" onclick="playAudio()">تشغيل الصوت</button>
+    <!-- زر إيقاف الصوت -->
+    <button class="pause-button" onclick="pauseAudio()">إيقاف الصوت</button>
   </div>
 
   <div class="container">
@@ -82,12 +85,26 @@
     <img src="image8.jpg" alt="صورة 8">
     <img src="image9.jpg" alt="صورة 9">
   
-    <!-- إضافة الصوت -->
-    <audio id="myAudio">
+    <!-- إضافة الصوت مع خاصية loop لتكرار الصوت -->
+    <audio id="myAudio" loop>
       <source src="shahad.mp3" type="audio/mp3">
       متصفحك لا يدعم تشغيل الصوت.
     </audio>
   </div>
+
+  <script>
+    // وظيفة لتشغيل الصوت
+    function playAudio() {
+      var audio = document.getElementById('myAudio');
+      audio.play();
+    }
+
+    // وظيفة لإيقاف الصوت
+    function pauseAudio() {
+      var audio = document.getElementById('myAudio');
+      audio.pause();
+    }
+  </script>
 
 </body>
 </html>
