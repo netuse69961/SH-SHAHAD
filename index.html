@@ -1,54 +1,57 @@
 <!DOCTYPE html>
 <html lang="ar">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>صفحة احترافية مع صور وصوت</title>
-    <style>
-      /* تجعل الصور تتكيف مع جميع أحجام الشاشات */
-      img {
-        width: 100%;
-        height: auto;
-        display: block;
-        margin-bottom: 10px;
-      }
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>صفحة احترافية مع صور وصوت</title>
+  <style>
+    /* تجعل الصور تتكيف مع جميع أحجام الشاشات */
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+      margin-bottom: 10px;
+    }
+    
+    /* تنسيق العنوان */
+    h1 {
+      text-align: center;
+      font-size: 2em;
+      margin-top: 20px;
+    }
+    
+    /* تنسيق صفحة العرض */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+  </style>
+</head>
+<body>
 
-      /* تنسيق العنوان */
-      h1 {
-        text-align: center;
-        font-size: 2em;
-        margin-top: 20px;
-      }
+  <h1>مرحبًا بك في الصفحة الاحترافية!</h1>
+  
+  <!-- عرض الصور -->
+  <img src="image1.jpg" alt="صورة 1">
+  <img src="image2.jpg" alt="صورة 2">
+  <img src="image3.jpg" alt="صورة 3">
+  <img src="image4.jpg" alt="صورة 4">
+  <img src="image5.jpg" alt="صورة 5">
+  <img src="image6.jpg" alt="صورة 6">
+  <img src="image7.jpg" alt="صورة 7">
+  <img src="image8.jpg" alt="صورة 8">
+  <img src="image9.jpg" alt="صورة 9">
+  
+  <!-- إضافة الصوت مع التشغيل التلقائي أو يدوي -->
+  <audio id="myAudio">
+    <source src="shahad.mp3" type="audio/mp3">
+    متصفحك لا يدعم تشغيل الصوت.
+  </audio>
 
-      /* تنسيق صفحة العرض */
-      body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #f4f4f4;
-      }
-    </style>
-  </head>
-  <body>
+  <!-- زر لتشغيل الصوت -->
+  <button onclick="document.getElementById('myAudio').play()">تشغيل الصوت</button>
 
-    <h1>مرحبًا بك في الصفحة الاحترافية!</h1>
-
-    <!-- عرض الصور -->
-    <img src="image1.jpg" alt="صورة 1">
-    <img src="image2.jpg" alt="صورة 2">
-    <img src="image3.jpg" alt="صورة 3">
-    <img src="image4.jpg" alt="صورة 4">
-    <img src="image5.jpg" alt="صورة 5">
-    <img src="image6.jpg" alt="صورة 6">
-    <img src="image7.jpg" alt="صورة 7">
-    <img src="image8.jpg" alt="صورة 8">
-    <img src="image9.jpg" alt="صورة 9">
-
-    <!-- إضافة الصوت مع التشغيل التلقائي -->
-    <audio autoplay>
-      <source src="shahad.mp3" type="audio/mp3">
-      متصفحك لا يدعم تشغيل الصوت.
-    </audio>
-
-  </body>
+</body>
 </html>
